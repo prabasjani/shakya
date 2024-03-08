@@ -1,0 +1,91 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  padding-top: 55px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+/* Logo */
+.logo {
+  display: flex;
+  align-content: center;
+  /* justify-content: center; */
+  margin-left: 30px;
+  height: 70px;
+}
+.logo > img {
+  width: 60px;
+  height: 60px;
+}
+.logo > h3 {
+  font-size: 30px;
+  letter-spacing: 3px;
+}
+
+/* Mennu */
+.menu {
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
+  /* animation: menuLoading 400ms ease; */
+}
+.menuItem {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin-left: 25px;
+  height: 50px;
+  position: relative;
+  transition: all 300ms aese;
+  font-size: 18px;
+  margin-top: 10px;
+  border-radius: 10px;
+  /* Animations */
+  animation-name: menuItemLoading;
+  animation-duration: 500ms;
+  animation-delay: 300ms;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+  transform: scale(0); /* this for animation after fill mode*/
+}
+.menuLinks {
+  text-decoration: none;
+  color: var(--black);
+}
+.menuItem:hover {
+  cursor: pointer;
+}
+.active {
+  background: var(--activeItem);
+  margin-left: 0px;
+  transform: scale(1.05);
+  /* transform: scaleX(1.1); */
+}
+.active::before {
+  content: "";
+  background: var(--pink);
+  width: 8px;
+  height: 100%;
+}
+
+/* Animations */
+/* @keyframes menuLoading {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+} */
+
+@keyframes menuItemLoading {
+  0% {
+    transform: scale(0);
+  }
+  90% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

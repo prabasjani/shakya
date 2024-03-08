@@ -1,0 +1,91 @@
+.contactContainer {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* Animations */
+  animation-name: contactLoading;
+  animation-duration: 300ms;
+  animation-delay: 900ms;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  /* below properties only for animations */
+  transform: translateY(2000px);
+  /* opacity: 0; */
+}
+.contactPage {
+  height: 80%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contactDetails {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.contactBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  height: 150px;
+  margin-bottom: 20px;
+  background: var(--yellow);
+  border-radius: 10px;
+  box-shadow: var(--boxShadow);
+}
+.contactBox:nth-child(2) {
+  background: var(--green);
+}
+.contactBox > a {
+  margin-top: 10px;
+  text-decoration: none;
+  font-size: 18px;
+  color: var(--black);
+}
+.contactForm > form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+form > input,
+form > textarea {
+  width: 450px;
+  padding: 12px;
+  font-size: 18px;
+  margin-bottom: 10px;
+  background: transparent;
+  border-radius: 8px;
+  border: 1px solid var(--pink);
+  outline: none;
+  box-shadow: var(--boxShadow);
+}
+form > input[type="submit"] {
+  width: 180px;
+  background: var(--activeItem);
+  cursor: pointer;
+}
+
+.address {
+  font-size: 22px;
+  color: var(--black);
+}
+
+/* Animations */
+@keyframes contactLoading {
+  0% {
+    transform: translateY(2000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

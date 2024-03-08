@@ -1,0 +1,94 @@
+.highlightContainer {
+  overflow-y: scroll;
+}
+.highlightContainer::-webkit-scrollbar {
+  width: 7px;
+  /* height: 6px; */
+}
+.highlightContainer::-webkit-scrollbar-thumb {
+  background: var(--black);
+  border-radius: 6px;
+}
+
+.highLightsPage {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.highLight {
+  display: flex;
+  align-items: center;
+  height: 300px;
+  box-shadow: var(--boxShadow);
+  margin: 20px 0;
+  animation-name: menuItemLoading; /* Reuse the animation scaling animation*/
+  animation-duration: 500ms;
+  animation-delay: 1000ms;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+  transform: scale(0); /* this for animation after fill mode*/
+}
+.highLight > img {
+  width: 430px;
+  /* height: 400px; */
+  background: var(--glass1);
+  border-right: 2px solid rgba(255, 255, 255, 1);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.highLight > span {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 30px;
+  padding-right: 20px;
+  background: var(--purple);
+  border-left: 2px solid rgba(255, 255, 255, 1);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color: white;
+}
+.highLight > span > h2 {
+  font-size: 40px;
+  margin: 0 0 15px 0;
+}
+.highLight > span > p {
+  font-size: 18px;
+  margin: 0;
+  line-height: 35px;
+}
+.specialities {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 40px;
+}
+.specialities > h1 {
+  font-size: 40px;
+  letter-spacing: 3px;
+}
+.speciality {
+  display: flex;
+  align-items: center;
+  padding: 0px 30px;
+  margin-left: 50px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background: var(--yellow);
+  transition: all 0.4s ease;
+}
+.speciality:hover {
+  transform: scale(1.05);
+  box-shadow: var(--boxShadow);
+}
+.highLightIcon {
+  margin-right: 40px;
+}
+.speciality > span {
+  font-size: 28px;
+}

@@ -1,0 +1,41 @@
+.heading {
+  height: 60px;
+  position: absolute;
+  top: 0;
+  box-shadow: var(--boxShadow);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 79%;
+  padding: 0 30px;
+  animation-name: headLoading;
+  animation-duration: 300ms;
+  animation-delay: 750ms;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+  /* below properties only for animations */
+  transform: translateY(-20px);
+  opacity: 0;
+}
+.heading > h1 {
+  font-size: 32px;
+  color: var(--black);
+}
+.heading > h3 {
+  font-size: 26px;
+}
+.heading > h3 > span {
+  color: var(--pink);
+}
+
+/* Animations */
+@keyframes headLoading {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

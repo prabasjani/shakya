@@ -1,0 +1,72 @@
+.achieversPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90%;
+  padding: 20px;
+}
+.achieversPage > h2 {
+  font-size: 32px;
+  color: var(--black);
+}
+.achiversContainers {
+  width: 90%;
+  height: 100%;
+  padding: 0px 30px;
+  background: var(--glass1);
+  box-shadow: var(--boxShadow);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  overflow-x: auto;
+  /* Animation purposes */
+  animation-name: mainContentLoading;
+  animation-duration: 800ms;
+  animation-timing-function: ease-in;
+  animation-delay: 1000ms;
+  animation-fill-mode: forwards;
+  transform: translateX(150%);
+}
+.achiversContainers::-webkit-scrollbar {
+  width: 7px;
+  height: 6px;
+}
+.achiversContainers::-webkit-scrollbar-thumb {
+  background: var(--black);
+  border-radius: 6px;
+}
+.achieversCard {
+  height: 300px;
+  width: 200px;
+  padding: 15px;
+  border-radius: 10px;
+  background: hsl(353, 100%, 94%);
+  box-shadow: var(--boxShadow);
+  margin-right: 20px;
+}
+.achieversCard > span {
+  width: 175px;
+  height: 175px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--activeItem);
+  border-radius: 50%;
+  margin-left: 10px;
+  margin-bottom: 15px;
+}
+.achieversCard > h3 {
+  margin: 0;
+  font-size: 26px;
+}
+.achieversCard > h4 {
+  margin: 10px 0;
+  font-size: 18px;
+}
+.achieversCard > p {
+  margin: 0;
+  font-size: 18px;
+  color: gray;
+}

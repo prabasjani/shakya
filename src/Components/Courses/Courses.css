@@ -1,0 +1,87 @@
+.coursesPage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  /* Animations */
+  animation-name: mainContentLoading;
+  animation-duration: 900ms;
+  animation-timing-function: ease-in;
+  animation-delay: 1000ms;
+  animation-fill-mode: forwards;
+  transform: translateX(150%);
+}
+.courseCard {
+  height: 350px;
+  width: 250px;
+  margin: 0px 20px;
+  background: var(--glass1);
+  box-shadow: var(--boxShadow);
+  border-radius: 8px;
+  border-left: 1px solid rgba(255, 255, 255, 1);
+  border-top: 1px solid rgba(255, 255, 255, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  position: relative;
+  cursor: pointer;
+}
+.courseIcon {
+  opacity: 0.3;
+  /* position: absolute;
+  top: 0px;
+  left: 0px; */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.courseTitle {
+  font-size: 36px;
+  margin-top: 40px;
+  opacity: 1;
+}
+.cardOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s ease;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+.cardOverlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--green);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: 0.5s;
+}
+.courseCard:hover .cardOverlay::before {
+  transform: scaleY(1);
+  transform-origin: bottom;
+}
+.content {
+  position: relative;
+  padding: 15px;
+  font-size: 22px;
+  line-height: 42px;
+  transform: translateY(350px);
+  transition: 0.5s ease;
+}
+.courseCard:hover .cardOverlay .content {
+  transform: translateY(0);
+}

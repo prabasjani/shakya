@@ -1,0 +1,59 @@
+.mainPage {
+  height: 100%;
+  width: 100%;
+  /* background: lightgreen; */
+}
+.container {
+  width: 79%;
+  height: calc(100% - 150px);
+  position: absolute;
+  bottom: 30px;
+  padding: 30px;
+  overflow-y: hidden;
+  scrollbar-width: 8px;
+  overflow-x: hidden; /* animated time scroll bar hidden*/
+}
+.homeContent {
+  height: 300px;
+  width: 900px;
+  background: var(--yellow);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px;
+  margin-left: 100px;
+  margin-top: 80px;
+  border-radius: 10px;
+  box-shadow: var(--boxShadow);
+  /* Animation purposes */
+  animation-name: mainContentLoading;
+  animation-duration: 800ms;
+  animation-timing-function: ease-in;
+  animation-delay: 1000ms;
+  animation-fill-mode: forwards;
+  transform: translateX(150%);
+}
+.homeContent > h1 {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+.homeContent > h1 > span {
+  color: var(--pink);
+}
+.homeContent > p {
+  font-size: 22px;
+  line-height: 35px;
+}
+
+/* Animations */
+@keyframes mainContentLoading {
+  0% {
+    transform: translateX(150%);
+  }
+  90% {
+    transform: translateX(-10%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
